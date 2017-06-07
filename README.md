@@ -1,4 +1,4 @@
-# CB Hugo - A conversion of Beautiful Hugo Theme
+# CB Hugo - A modification of the Beautiful Hugo Theme
 
 ## Installation
 

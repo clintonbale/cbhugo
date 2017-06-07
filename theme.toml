@@ -1,7 +1,7 @@
 name = "CB Hugo"
 license = "MIT"
 licenselink = "https://github.com/clintonbale/cbhugo/blob/master/LICENSE"
-description = "A modification of the beautiful hugo theme for personal use"
+description = "A modification of the beautiful hugo theme."
 tags = ["blog", "company", "portfolio", "projects", "minimal", "responsive"]
 features = ["blog", "themes", "disqus", "minimal", "responsive"]
 min_version = 0.20

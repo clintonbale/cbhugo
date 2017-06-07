@@ -20,7 +20,7 @@ icon = "fa-google-plus"
 id = "github"
 url = "https://github.com/%s"
 title = "GitHub"
-icon = "fa fa-github"
+icon = "fa-github"
 
 [[social_icons]]
 id = "twitter"

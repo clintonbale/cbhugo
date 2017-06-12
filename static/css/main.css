@@ -1,11 +1,18 @@
 /* --- General --- */
-
+html, body {
+  height: 100%;
+}
 body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 18px;
   color: #404040;
   position: relative;
   background: #FFF;
+  /*display: flex;
+  flex-flow: column;*/
+}
+.container[role=main] {
+   margin-bottom:50px;
 }
 p {
   line-height: 1.5;
@@ -16,8 +23,8 @@ p a {
   color: #008AFF;
 }
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 800;
+  font-family: 'Overpass', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 600;
 }
 a {
   color: #008AFF;
@@ -48,11 +55,6 @@ hr.small {
   .main-content {
     padding-top: 130px;
   }
-}
-
-.main-explain-area {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  padding: 15px inherit;
 }
 
 .hideme {
@@ -97,9 +99,9 @@ img {
 /* --- Navbar --- */
 
 .navbar-custom {
-  background: #F5F5F5;
-  border-bottom: 1px solid #EAEAEA;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: white;
+  border-bottom: 2px solid #e7ebee;
+  font-family: 'Overpass', 'Helvetica Neue', Helvetica, Arial, sans-serif;  
 }
 
 .navbar-custom .nav li a {
@@ -108,14 +110,25 @@ img {
   letter-spacing: 1px;
 }
 
-.navbar-custom .navbar-brand,
+.navbar-custom .navbar-brand a,
 .navbar-custom .nav li a {
   font-weight: 800;
   color: #404040;
 }
 
-.navbar-custom .navbar-brand:hover,
-.navbar-custom .navbar-brand:focus ,
+.navbar-custom .navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-custom .navbar-brand h2.navbar-brand-sub {
+  font-weight: 300;
+  font-size: 18px;
+  margin: 1px 0px 0px 0px;
+}
+
+.navbar-custom .navbar-brand a:hover,
+.navbar-custom .navbar-brand a:focus ,
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus {
   color: #0085a1;
@@ -128,14 +141,17 @@ img {
   transition: padding .5s ease-in-out;  
 }
 .navbar-custom .navbar-brand-logo img {
-  height: 50px;
+  height: 75px;
+  margin: 0 1.5rem 0 0;
+  border-radius: 50%;  
+  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .8);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
   -webkit-transition: height .5s ease-in-out;
   -moz-transition: height .5s ease-in-out;
   transition: height .5s ease-in-out;
 }
-.navbar-custom.top-nav-short .navbar-brand-logo {
-  padding-top: 5px;
-}
+.navbar-custom.top-nav-short .navbar-brand-logo {}
 .navbar-custom.top-nav-short .navbar-brand-logo img {
   height: 40px;
 }
@@ -147,7 +163,6 @@ img {
     -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
     transition: background .5s ease-in-out,padding .5s ease-in-out;
   }
-
   .navbar-custom.top-nav-short {
     padding: 0;
   }
@@ -232,6 +247,9 @@ img {
   .navbar-custom .nav .navlinks-container.show-children .navlinks-children {
     display: block;
   }
+  .navbar-custom .navbar-brand-logo img {
+    height: 40px;
+  }
 }
 @media only screen and (min-width: 768px) {
   .navbar-custom .nav .navlinks-container {
@@ -257,9 +275,9 @@ img {
 
 footer {
   padding: 30px 0;
-  background: #F5F5F5;
+  background: white;
   border-top: 1px #EAEAEA solid;
-  margin-top: 50px;
+  margin-top: auto;
   font-size: 14px;
 }
 
@@ -272,7 +290,7 @@ footer .list-inline {
   padding: 0;
 }
 footer .copyright {
-  font-family: Open Sans;
+  font-family: 'Lora';
   text-align: center;
   margin-bottom: 0;
 }
@@ -283,7 +301,6 @@ footer .theme-by {
 
 @media only screen and (min-width: 768px) {
   footer {
-    padding: 50px 0;
   }
   footer .footer-links {
     font-size: 18px;
@@ -343,7 +360,7 @@ footer .theme-by {
   text-decoration: none;
 }
 .post-preview .post-entry {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .post-entry-container {
   display: inline-block;
@@ -381,7 +398,7 @@ footer .theme-by {
 /* --- Tags --- */
 
 .blog-tags {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #999;
   font-size: 15px;
   margin-bottom: 30px;
@@ -452,6 +469,9 @@ footer .theme-by {
   -moz-transition: opacity 1s linear;
   transition: opacity 1s linear;
 }
+.intro-header .page-heading.list {
+  
+}
 .intro-header .page-heading {
   text-align: center;
 }
@@ -474,7 +494,7 @@ footer .theme-by {
   font-size: 27px;
   line-height: 1.1;
   display: block;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
   margin: 10px 0 0;
 }
@@ -499,7 +519,7 @@ footer .theme-by {
   padding: 5px 10px;
   font-size: 11px;
   color: #EEE;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   right: 0;
   bottom: 0;
   display: none;
@@ -573,7 +593,7 @@ footer .theme-by {
 /* --- Pager --- */
 
 .pager li a {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 800;

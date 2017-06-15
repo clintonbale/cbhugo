@@ -1,18 +1,17 @@
 /* --- General --- */
-html, body {
-  height: 100%;
-}
 body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 18px;
   color: #404040;
   position: relative;
   background: #FFF;
-  /*display: flex;
-  flex-flow: column;*/
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
 }
 .container[role=main] {
    margin-bottom:50px;
+   flex: 1 0 auto;
 }
 p {
   line-height: 1.5;
@@ -84,6 +83,13 @@ img {
   display: block;
   margin: auto;
   max-width: 100%;
+}
+
+article figure figcaption {
+  text-align: center;
+  font-family: 'Overpass';
+  font-weight: 300;
+  margin-top: 10px;
 }
 
 .disqus-comments {
